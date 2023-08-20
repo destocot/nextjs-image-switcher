@@ -18,10 +18,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-start-rgb));
+}
+
+.images-container {
+  mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 93%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to left,
+      transparent 0%,
+      black 10%,
+      black 93%,
+      transparent 100%
+    );
+  mask-mode: alpha;
 }
